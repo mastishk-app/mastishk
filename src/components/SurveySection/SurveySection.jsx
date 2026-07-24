@@ -454,10 +454,10 @@ export default function SurveySection({ questions = [] }) {
                   >
                     Full Name <span className="text-error">*</span>
                   </label>
-                  <div className="relative">
+                  <div className="relative flex items-center">
                     <MdPerson
                       size={20}
-                      className="top-1/2 left-4 absolute text-outline group-focus-within:text-primary transition-colors -translate-y-1/2"
+                      className="left-4 absolute text-outline group-focus-within:text-primary pointer-events-none transition-colors"
                     />
                     <input
                       id="participant-name"
@@ -528,12 +528,12 @@ export default function SurveySection({ questions = [] }) {
                         : "Mobile Number"}{" "}
                       <span className="text-error">*</span>
                     </label>
-                    <div className="group relative">
+                    <div>
                       {contactMethod === "email" ? (
-                        <>
+                        <div className="relative flex items-center">
                           <MdEmail
                             size={20}
-                            className="top-1/2 left-4 absolute text-outline group-focus-within:text-primary -translate-y-1/2"
+                            className="left-4 absolute text-outline group-focus-within:text-primary pointer-events-none transition-colors"
                           />
                           <input
                             id="contact-value"
@@ -544,7 +544,7 @@ export default function SurveySection({ questions = [] }) {
                             className="bg-[#fcfaf8] py-3 pr-4 pl-12 border-[#f4ece3] border-2 hover:border-outline focus:border-primary rounded-xl w-full text-body-md text-on-surface placeholder:text-outline/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20"
                             required
                           />
-                        </>
+                        </div>
                       ) : (
                         <>
                           <style>{`
