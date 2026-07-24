@@ -58,7 +58,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="top-6 left-1/2 z-50 fixed bg-surface/90 shadow-[0_12px_40px_-12px_rgba(158,61,0,0.2)] backdrop-blur-xl border border-outline-variant/20 rounded-full w-[85%] transition-all -translate-x-1/2 duration-300">
+      <nav className="top-6 left-1/2 z-50 absolute bg-surface/90 shadow-[0_12px_40px_-12px_rgba(158,61,0,0.2)] backdrop-blur-xl border border-outline-variant/20 rounded-full w-[85%] transition-all -translate-x-1/2 duration-300">
         <div className="flex justify-between items-center px-md sm:px-lg py-sm w-full">
           <Link
             to="/"

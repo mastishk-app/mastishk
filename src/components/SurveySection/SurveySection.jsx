@@ -67,15 +67,37 @@ import {
   MdCloud,
   MdSmartDisplay,
   MdBolt,
+  MdSwapHoriz,
+  MdMenuBook,
+  MdPhoneIphone,
+  MdPsychology,
+  MdMailOutline,
+  MdDeviceHub,
+  MdSlowMotionVideo,
+  MdFreeCancellation,
+  MdBedtime,
+  MdSelfImprovement,
 } from "react-icons/md";
 
 const iconMap = {
+  // Legacy keys (kept for compatibility)
   auto_stories: MdAutoStories,
   psychology_alt: MdPsychologyAlt,
-  restaurant_menu: MdRestaurantMenu,
   cloud: MdCloud,
-  smart_display: MdSmartDisplay,
   bolt: MdBolt,
+  // Active keys used in questions.js
+  swap_horiz: MdSwapHoriz,
+  menu_book: MdMenuBook,
+  phone_iphone: MdPhoneIphone,
+  psychology: MdPsychology,
+  mail_outline: MdMailOutline,
+  restaurant_menu: MdRestaurantMenu,
+  device_hub: MdDeviceHub,
+  slow_motion_video: MdSlowMotionVideo,
+  smart_display: MdSmartDisplay,
+  free_cancellation: MdFreeCancellation,
+  bedtime: MdBedtime,
+  self_improvement: MdSelfImprovement,
 };
 
 /**

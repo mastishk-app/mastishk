@@ -27,7 +27,7 @@ const questions = [
     dimension: "attention_fragmentation",
     category: "Attention Fragmentation",
     icon: "swap_horiz",
-    text: "I open an app with a clear intention, but end up doing something completely different within 30 seconds.",
+    text: "I pick up my phone with a clear intention, but end up doing something completely different within 30 seconds.",
     insight:
       "Measures task-switching compulsion. Think about the last time you unlocked your phone? Did you do what you meant to?",
   },
@@ -36,7 +36,7 @@ const questions = [
     dimension: "attention_fragmentation",
     category: "Attention Fragmentation",
     icon: "menu_book",
-    text: "When reading, I reach the end of a paragraph and realise I absorbed nothing, so I re-read it again.",
+    text: "When reading, I often reach the end of a paragraph and realize I haven't understood what I just read, so I read it again.",
     insight:
       "Tests reading comprehension loss. Recall your last article or book. How often did your eyes move but your mind didn't?",
   },
@@ -45,7 +45,7 @@ const questions = [
     dimension: "attention_fragmentation",
     category: "Attention Fragmentation",
     icon: "phone_iphone",
-    text: "I feel a pull to check my phone even in situations where I know there's nothing new: a meal, a meeting, a conversation.",
+    text: "I feel an urge to check my phone even while I'm actively engaged in a task.",
     insight:
       "Detects compulsive checking urges. Picture a quiet dinner. Do your hands reach for your pocket out of habit?",
   },
@@ -68,7 +68,7 @@ const questions = [
     icon: "mail_outline",
     text: "I need to re-read messages or instructions multiple times before I can act on them.",
     insight:
-      "Tests information retention under load. Consider your last email or text. Could you act on it after one read?",
+      "Tests your ability to retain information long enough to act on it. Think about the last email or message you read—could you act on it after reading it just once?",
   },
 
   // ── Dimension 3: Decision Fatigue ─────────────────────────────────────────
@@ -78,7 +78,7 @@ const questions = [
     dimension: "decision_fatigue",
     category: "Decision Fatigue",
     icon: "restaurant_menu",
-    text: "By the afternoon, small decisions (what to eat, which task to tackle next) feel disproportionately exhausting.",
+    text: "By the afternoon, even simple decisions (like what to eat or which task to do next) feel harder than they should.",
     insight:
       "Measures afternoon mental depletion. Think about yesterday's lunch. Did choosing what to eat feel harder than it should?",
   },
@@ -108,7 +108,7 @@ const questions = [
     dimension: "dopamine_dependency",
     category: "Dopamine Dependency",
     icon: "smart_display",
-    text: "I scroll through short videos or posts feeling vaguely dissatisfied, but I keep going anyway, searching for something that never arrives.",
+    text: "I keep scrolling through short videos or posts even when I'm no longer enjoying them.",
     insight:
       "Captures the doom-scroll loop. Remember your last scroll session. Were you enjoying it, or just hoping the next one would hit?",
   },
@@ -120,7 +120,7 @@ const questions = [
     dimension: "recovery_quality",
     category: "Recovery Quality",
     icon: "free_cancellation",
-    text: "During breaks (lunch, commute, before sleep), I instinctively reach for my phone rather than just sitting with my thoughts.",
+    text: "During breaks (e.g., lunch, commuting, or before sleep), I instinctively reach for my phone instead of taking a mental break.",
     insight:
       "Tests whether rest is truly restful. During your last break, did you sit quietly, or fill the silence with a screen?",
   },
