@@ -5,7 +5,6 @@ import {
   PenLine,
   Puzzle,
   MessagesSquare,
-  Sparkles,
   Heart,
   Check,
   Loader2,
@@ -53,14 +52,6 @@ const FEATURES = [
     description:
       "A thinking companion that won't hand you answers — it helps you think the solution through yourself.",
     accent: 'bg-secondary-fixed',
-  },
-  {
-    id: 'and-still-cooking',
-    icon: Sparkles,
-    title: 'And Still Cooking',
-    description:
-      "This is just the first course — a whole kitchen of focus tools is simmering behind the scenes.",
-    accent: 'bg-primary-fixed',
   },
 ];
 
@@ -166,7 +157,7 @@ export default function WhatsComing() {
   );
 
   return (
-    <section className="relative py-xl w-full overflow-hidden">
+    <section id="whats-coming" className="relative py-xl w-full overflow-hidden scroll-mt-24">
       <div className="-top-24 -right-24 bg-primary-fixed/40 absolute blur-3xl rounded-full w-72 h-72 animate-slow-pulse-8 pointer-events-none" />
       <div className="-bottom-16 -left-16 bg-tertiary-fixed/30 absolute blur-3xl rounded-full w-56 h-56 animate-slow-pulse-12 pointer-events-none" />
 
@@ -194,6 +185,10 @@ export default function WhatsComing() {
           />
         ))}
       </div>
+
+      <p className="relative mt-10 text-center text-body-md text-on-surface-variant">
+        And still cooking — a whole kitchen of focus tools is simmering behind the scenes.
+      </p>
     </section>
   );
 }

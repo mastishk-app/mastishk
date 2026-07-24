@@ -62,3 +62,23 @@ CREATE POLICY "Allow anonymous feature love inserts"
   TO anon
   WITH CHECK (true);
 
+-- Post-survey freeform feedback from the result card
+CREATE TABLE IF NOT EXISTS user_feedback (
+  id             BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  created_at     TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  feedback       TEXT NOT NULL,
+  session_token  UUID,
+  name           TEXT,
+  contact_value  TEXT
+);
+
+COMMENT ON TABLE user_feedback IS 'Freeform feedback submitted from the result card after survey completion.';
+
+ALTER TABLE user_feedback ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow anonymous feedback inserts"
+  ON user_feedback
+  FOR INSERT
+  TO anon
+  WITH CHECK (true);
+

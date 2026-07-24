@@ -130,6 +130,7 @@ export default function SurveySection({ questions = [] }) {
   const [contactValue, setContactValue] = useState("");
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [showResultTeaser, setShowResultTeaser] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [scoreResult, setScoreResult] = useState(null);
@@ -301,6 +302,7 @@ export default function SurveySection({ questions = [] }) {
   };
 
   if (submitted) {
+    if (!showResultTeaser) return null;
     return (
       <ResultTeaser
         name={name}
@@ -309,6 +311,7 @@ export default function SurveySection({ questions = [] }) {
         scoreResult={scoreResult}
         referralCode={referralCode}
         alreadyWaitlisted={alreadyWaitlisted}
+        onDismiss={() => setShowResultTeaser(false)}
       />
     );
   }
