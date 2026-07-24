@@ -42,4 +42,23 @@ AS $$
   UPDATE survey_responses SET answers = new_answers WHERE session_token = token;
 $$;
 
+-- Feature love impressions ("I love this!" on What's Coming cards)
+CREATE TABLE IF NOT EXISTS feature_loves (
+  id             BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  created_at     TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  feature_id     TEXT NOT NULL,
+  session_token  UUID
+);
+
+COMMENT ON TABLE feature_loves IS 'Stores "I love this!" votes for upcoming feature ideas on the landing page.';
+
+CREATE INDEX IF NOT EXISTS feature_loves_feature_id_idx ON feature_loves (feature_id);
+
+ALTER TABLE feature_loves ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow anonymous feature love inserts"
+  ON feature_loves
+  FOR INSERT
+  TO anon
+  WITH CHECK (true);
 

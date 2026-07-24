@@ -1,6 +1,7 @@
 import Hero from '../components/Hero/Hero';
 import InfoCard from '../components/InfoCard/InfoCard';
 import UserJourney from '../components/UserJourney/UserJourney';
+import WhatsComing from '../components/WhatsComing/WhatsComing';
 import SurveySection from '../components/SurveySection/SurveySection';
 import questions from '../data/questions';
 
@@ -14,6 +15,7 @@ export default function HomePage() {
       <InfoCard />
       <SurveySection questions={questions} />
       <UserJourney />
+      <WhatsComing />
     </main>
   );
 }
