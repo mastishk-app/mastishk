@@ -9,49 +9,49 @@ const journeySteps = [
     number: 1,
     title: 'Awareness',
     description:
-      'You notice something\'s off — brain fog by noon, scrolling without thinking, tasks that used to take an hour now feel impossible to start.',
+      'Brain fog by noon. Mindless scrolling. Tasks that used to be easy now feel impossible to start.',
     icon: 'eye',
   },
   {
     number: 2,
     title: 'Discovery',
     description:
-      'You land on Restora — an AI-powered solution built for minds drained by screen overload, short-form content, and always-on digital life.',
+      'You find Restora, built for minds fried by screens, short-form feeds, and always-on digital life.',
     icon: 'search',
   },
   {
     number: 3,
-    title: 'The 60-second study',
+    title: 'The 90-second check',
     description:
-      'You take a short anonymous survey. No judgment, no sales pitch — just honest questions about how your mind feels day to day.',
+      'A short, confidential focus check. No judgment, no sales pitch. Just honest questions about how your mind feels.',
     icon: 'clipboard',
   },
   {
     number: 4,
     title: 'Join the waitlist',
     description:
-      'You\'re added to early access. We\'ll reach out personally when Restora is ready — no spam, no noise, just one email that matters.',
+      "You're in for early access. We'll reach out when Restora is ready. No spam, just one message that matters.",
     icon: 'mail',
   },
   {
     number: 5,
-    title: 'AI assessment',
+    title: 'Your focus map',
     description:
-      'Restora\'s AI reads your fatigue patterns, attention habits, and digital load — then builds a personalised recovery plan just for your mind.',
+      'Restora maps your fatigue patterns and attention habits, then shapes a recovery plan that fits your mind.',
     icon: 'chip',
   },
   {
     number: 6,
     title: 'Daily recovery sessions',
     description:
-      'Short, science-backed sessions help you rebuild focus, reduce mental noise, and train your brain to enter deep work again — one day at a time.',
+      'Short sessions help you rebuild focus, quiet the mental noise, and get back into deep work, one day at a time.',
     icon: 'plant',
   },
   {
     number: 7,
     title: 'Flow state restored',
     description:
-      'The fog lifts. Your attention span returns. Deep focus, creative thinking, and mental clarity come back — and this time, they stay.',
+      'The fog lifts. Focus sticks. Clarity comes back, and this time it stays.',
     icon: 'sun',
   },
 ];
@@ -273,13 +273,13 @@ export default function UserJourney() {
         transition={{ duration: 0.6 }}
       >
         <span className="font-bold text-label-md text-secondary uppercase tracking-[0.2em]">
-          User Journey
+          How it works
         </span>
         <h2 className="text-headline-xl text-primary mt-2 mb-3">
           Out of the Fog. Into the Flow.
         </h2>
         <p className="text-body-lg text-on-surface-variant max-w-md mx-auto">
-          From the first moment of awareness to lasting mental clarity — here's the path Restora guides you through.
+          From &quot;something feels off&quot; to actual mental clarity. Here&apos;s the path.
         </p>
       </motion.div>
 

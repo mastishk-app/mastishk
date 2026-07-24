@@ -73,7 +73,7 @@ export const DIMENSION_INSIGHTS = {
   dopamine_dependency:
     "Your brain has recalibrated to expect constant novelty. A gradual stimulation detox will restore your baseline.",
   recovery_quality:
-    "Your rest isn't actually restful. True cognitive recovery means unstimulated downtime — not just switching screens.",
+    "Your rest isn't actually restful. True cognitive recovery means unstimulated downtime, not just switching screens.",
 };
 
 // Human-readable one-liner for each dimension score (keyed by severity band)
@@ -107,7 +107,7 @@ export const DIMENSION_TRANSLATIONS = {
 
 // Headline sentence per severity level that interprets the overall score
 export const SEVERITY_HEADLINES = {
-  low: "Your cognitive stamina is in decent shape — but there's room to sharpen it.",
+  low: "Your cognitive stamina is in decent shape, but there's room to sharpen it.",
   moderate: "Your brain is running at below half capacity by midday.",
   high: "Your mind is hitting a wall well before your day is over.",
 };

@@ -5,13 +5,13 @@ const symptoms = [
     icon: TbBrain,
     title: 'Constant brain fog',
     description:
-      'You sit down to think — and your mind goes blank within seconds.',
+      'You sit down to think, and your mind goes blank within seconds.',
   },
   {
     icon: TbDeviceMobile,
     title: "Can't stop scrolling",
     description:
-      'Short-form content has rewired how your brain seeks reward.',
+      'You open the app for a minute and lose half an hour.',
   },
   {
     icon: TbFocus2,
@@ -28,9 +28,12 @@ const symptoms = [
 export default function InfoCard() {
   return (
     <section className="w-full mb-xl opacity-0 animate-fade-in-up">
-      <h2 className="text-label-md uppercase tracking-widest text-secondary text-center mb-8">
+      <h2 className="text-label-md uppercase tracking-widest text-secondary text-center mb-3">
         Sound familiar?
       </h2>
+      <p className="text-body-md text-on-surface-variant text-center mb-8 max-w-md mx-auto">
+        If any of these hit home, you&apos;re not alone.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {symptoms.map((symptom) => (

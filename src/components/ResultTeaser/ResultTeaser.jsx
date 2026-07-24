@@ -44,11 +44,11 @@ export default function ResultTeaser({
     const shareUrl = referralCode
       ? `${window.location.origin}?ref=${referralCode}`
       : window.location.origin;
-    const shareText = `I just took a 60-second cognitive fatigue assessment — turns out my brain's been running on fumes. Take it here: ${shareUrl}`;
+    const shareText = `I just did Restora's 90-second focus check. Turns out my brain's been running on fumes. Try it: ${shareUrl}`;
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "Restora — Cognitive Fatigue Assessment",
+          title: "Restora: 90-Second Focus Check",
           text: shareText,
           url: shareUrl,
         });
@@ -82,7 +82,7 @@ export default function ResultTeaser({
   };
 
   const handleClose = () => {
-    window.location.reload();
+    onDismiss?.();
   };
 
   const handleOpenFeedback = () => {
@@ -151,8 +151,8 @@ export default function ResultTeaser({
               : "You're on the list!"}
           </h2>
           <p className="max-w-sm font-medium text-[#4a3f35] text-lg leading-relaxed">
-            We&apos;ll notify you as soon as Restora is ready for you. Hang
-            tight!
+            We&apos;ll hit you up the second Restora is ready. No spam energy.
+            Promise.
           </p>
         </div>
 
@@ -167,12 +167,12 @@ export default function ResultTeaser({
             {feedbackStatus === "sent" ? (
               <>
                 <MdCheckCircle size={18} className="text-green-600" />
-                Got your note — thank you!
+                Got your note. Thank you!
               </>
             ) : (
               <>
                 <MessageCircleHeart size={18} />
-                Got a bone to pick? Tell us
+                Thoughts? Spill
               </>
             )}
           </button>
@@ -183,7 +183,7 @@ export default function ResultTeaser({
             className="flex flex-1 justify-center items-center gap-2 bg-[#b64b16] hover:bg-[#92360b] shadow-lg shadow-orange-900/10 px-5 py-3.5 rounded-full font-bold text-[14px] text-white md:text-[15px] transition-colors"
           >
             <Sparkles size={18} />
-            Sneak a peek at what&apos;s cooking
+            Peek at what&apos;s cooking
           </button>
         </div>
 
@@ -275,15 +275,15 @@ export default function ResultTeaser({
                   Loud and clear
                 </h3>
                 <p className="max-w-xs text-[#4a3f35] text-[15px] leading-relaxed">
-                  Your note lands straight with the team. Thanks for shaping
-                  Restora with us.
+                  Your note just landed with the team. Thanks for helping us
+                  make Restora less mid.
                 </p>
                 <button
                   type="button"
                   onClick={() => setShowFeedback(false)}
                   className="bg-[#b64b16] hover:bg-[#92360b] mt-6 px-6 py-3 rounded-full font-bold text-sm text-white transition-colors"
                 >
-                  Back to results
+                  Done
                 </button>
               </div>
             ) : (
@@ -293,8 +293,8 @@ export default function ResultTeaser({
                   <h3 className="font-bold text-xl">Spill the tea</h3>
                 </div>
                 <p className="mb-5 text-[#8c6b5d] text-[14px] leading-relaxed">
-                  Love it, hate it, missing something? We read every word —
-                  rants welcome.
+                  Love it, hate it, missing something? We read every word.
+                  Rants absolutely welcome.
                 </p>
                 <textarea
                   value={feedback}
@@ -311,7 +311,7 @@ export default function ResultTeaser({
                   </span>
                   {feedbackStatus === "error" && (
                     <span className="text-[12px] text-red-600">
-                      Couldn&apos;t send — try again?
+                      Couldn&apos;t send. Try again?
                     </span>
                   )}
                 </div>
@@ -329,7 +329,7 @@ export default function ResultTeaser({
                   ) : (
                     <>
                       <Send size={18} />
-                      Send it our way
+                      Send it
                     </>
                   )}
                 </button>

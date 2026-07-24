@@ -41,9 +41,9 @@ export default function AboutUsPage() {
               Reclaiming minds in the age of digital fog.
             </h1>
             <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-lg">
-              Restora isn't just another wellness app. It's a research-driven movement
-              to understand and reverse the cognitive fatigue epidemic — the invisible
-              cost of our hyper-connected lives.
+              Restora isn&apos;t another guilt-trip wellness app. It&apos;s a playful,
+              practical way to figure out why your focus is fried, and help you get
+              it back.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function AboutUsPage() {
           >
             <img
               src={mascot}
-              alt="Restora Thinking Mascot"
+              alt="Restora mascot thinking through digital fog"
               className="w-full max-w-xs h-auto object-contain"
             />
           </motion.div>
@@ -76,19 +76,19 @@ export default function AboutUsPage() {
           </h2>
           <div className="space-y-4 text-body-md text-on-surface-variant leading-relaxed">
             <p>
-              It started with a simple observation: brilliant, capable people were
-              struggling to think clearly. Not because of any disorder — but because
-              modern life had silently drained their cognitive reserves.
+              It started with a simple observation: smart, capable people were
+              struggling to think clearly. Not because something was &quot;wrong&quot; with
+              them, but because modern life had quietly drained their mental battery.
             </p>
             <p>
-              Endless notifications, algorithmic feeds designed to capture attention,
-              and the constant context-switching of digital life had created a new kind
-              of exhaustion — one that doesn't show up on any medical test.
+              Endless notifications, feeds built to steal attention, and constant
+              tab-switching created a new kind of exhaustion, the kind that doesn&apos;t
+              show up on a medical test, but hits hard by 3pm.
             </p>
             <p>
-              We realised that before we could build a solution, we needed to understand
-              the problem deeply. That's why Restora begins with research — listening
-              to real people, gathering real data, and letting science guide our path.
+              So before we built a bunch of features, we decided to listen. Restora
+              starts by talking to real people, learning how focus actually breaks,
+              and building tools that feel human, not preachy.
             </p>
           </div>
         </motion.div>
@@ -107,15 +107,12 @@ export default function AboutUsPage() {
           </h2>
           <div className="space-y-4 text-body-md text-on-surface-variant leading-relaxed">
             <p>
-              We look forward to identifying the problem at its core — understanding
-              exactly how and why cognitive fatigue impacts everyday life — and then
-              solving it with the right approach and framework.
+              Map how digital life drains focus, then build tools that help you
+              get it back. Simple as that.
             </p>
             <p>
-              Our focus isn't just on building an app. It's on designing a structured,
-              research-backed methodology that tackles digital-age brain fog from the
-              ground up — so every solution we create is rooted in real insight, not
-              guesswork.
+              We&apos;re not here to shame your screen time. We&apos;re here to make deep
+              focus feel possible again, one small habit at a time.
             </p>
           </div>
         </motion.div>
@@ -140,7 +137,7 @@ export default function AboutUsPage() {
               Meet the Team
             </h2>
             <p className="text-body-lg text-on-surface-variant mt-3 max-w-xl mx-auto">
-              A small, passionate group united by one belief — your mind deserves better.
+              A small, passionate group united by one belief: your mind deserves better.
             </p>
           </div>
 
@@ -168,17 +165,17 @@ export default function AboutUsPage() {
             className="mx-auto text-primary mb-4 opacity-60"
           />
           <h2 className="text-headline-md text-on-surface font-bold mb-3">
-            Be Part of the Research
+            Come Build This With Us
           </h2>
           <p className="text-body-lg text-on-surface-variant max-w-md mx-auto mb-6">
-            Your 60-second survey helps us understand cognitive fatigue at scale.
-            Every response matters.
+            Your 90-second focus check helps us understand what people actually
+            need. Every response shapes what we build next.
           </p>
           <Link
             to="/"
             className="inline-flex items-center gap-2 bg-primary text-on-primary px-md py-[12px] rounded-full text-label-md font-bold hover:bg-primary/90 transition-colors shadow-sm"
           >
-            Take the Survey
+            Start the Focus Check
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -203,13 +200,13 @@ const teamMembers = [
   {
     name: 'Priyanshi Jain',
     role: 'Founder',
-    bio: 'Passionate engineer building at the intersection of technology and mental wellness. Turning real-world problems into elegant solutions.',
+    bio: 'Engineer obsessed with how tech shapes the mind. Designs the product experience so Restora feels calm, clear, and actually usable.',
     initials: 'PJ',
   },
   {
     name: 'Mehul Sharma',
     role: 'Founder',
-    bio: 'Passionate engineer building at the intersection of technology and mental wellness. Turning real-world problems into elegant solutions.',
+    bio: 'Builder who got tired of losing whole evenings to the scroll. Handles the systems side so the focus tools you want can actually ship.',
     initials: 'MS',
   },
 ];

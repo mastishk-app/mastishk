@@ -80,7 +80,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
               {/* ── Title Section ── */}
               <div className="mb-8 pb-6 border-b border-outline-variant/20">
                 <p className="text-body-lg text-on-surface-variant font-medium italic">
-                  Restora — Out of the fog. Into the flow.
+                  Restora: Out of the fog. Into the flow.
                 </p>
                 <div className="mt-3 flex flex-wrap gap-4 text-label-sm text-on-surface-variant/70">
                   <span>Effective Date: July 2026</span>
@@ -95,7 +95,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 </h3>
                 <p className="text-body-md text-on-surface-variant leading-relaxed">
                   At Restora, we believe in transparency. You're trusting us with your
-                  information — and we take that seriously. This policy explains exactly
+                  information, and we take that seriously. This policy explains exactly
                   what we collect, why we collect it, and what we will never do with it.
                 </p>
               </div>
@@ -103,20 +103,20 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
               {/* ── Section 1 ── */}
               <PolicySection number="1" title="What We Collect">
                 <p className="text-body-md text-on-surface-variant mb-3">
-                  When you participate in our study or join our waitlist, we may collect:
+                  When you take the focus check or join our waitlist, we may collect:
                 </p>
                 <ul className="space-y-2">
                   <PolicyBullet
                     bold="Your name"
-                    text="— so we know who you are"
+                    text="so we know who you are"
                   />
                   <PolicyBullet
-                    bold="Your email address"
-                    text="— so we can reach you when Restora is ready"
+                    bold="Your email address or mobile number"
+                    text="whichever contact method you choose, so we can reach you when Restora is ready"
                   />
                   <PolicyBullet
                     bold="Your survey responses"
-                    text="— to understand how cognitive fatigue affects people like you"
+                    text="to understand how digital fatigue and focus issues show up for people like you"
                   />
                 </ul>
                 <p className="text-body-md text-on-surface-variant mt-3 font-medium">
@@ -137,8 +137,8 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 </blockquote>
                 <p className="text-body-md text-on-surface-variant">
                   Your survey responses help us build something that actually works for
-                  real people. Your name and email ensure we can reach you when we're
-                  ready — and only then.
+                  real people. Your name and contact details ensure we can reach you when
+                  we're ready, and only then.
                 </p>
               </PolicySection>
 
@@ -150,7 +150,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 <ul className="space-y-2">
                   <PolicyBullet text="Sending you updates about Restora's development" />
                   <PolicyBullet text="Notifying you when early access or the app is available" />
-                  <PolicyBullet text="Sharing findings from our cognitive fatigue research (anonymised and aggregated — never individual)" />
+                  <PolicyBullet text="Sharing findings from our cognitive fatigue research (anonymised and aggregated, never individual)" />
                   <PolicyBullet text="Occasionally sharing relevant insights about cognitive health and mental wellness" />
                 </ul>
                 <p className="text-body-md text-on-surface-variant mt-3">
@@ -168,10 +168,10 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   <NeverItem text='We will never share your personal information with third parties' />
                   <NeverItem text='We will never contact you on behalf of any other brand or product' />
                   <NeverItem text='We will never use your responses to target you with third-party advertising' />
-                  <NeverItem text='We will never share your individual survey responses — only anonymised, aggregated insights' />
+                  <NeverItem text='We will never share your individual survey responses, only anonymised, aggregated insights' />
                 </ul>
                 <p className="text-body-md text-on-surface-variant mt-4 font-medium italic">
-                  Your data belongs to you. We are only borrowing it — with your permission.
+                  Your data belongs to you. We are only borrowing it, with your permission.
                 </p>
               </PolicySection>
 
@@ -180,7 +180,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 <p className="text-body-md text-on-surface-variant">
                   Only the Restora core team has access to your information. We do not
                   share it with partners, investors, collaborators, or any external
-                  parties — ever.
+                  parties, ever.
                 </p>
               </PolicySection>
 
@@ -197,7 +197,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 <p className="text-body-md text-on-surface-variant">
                   We will keep your data for as long as Restora is active and you remain
                   subscribed to our communications. You can ask us to delete your
-                  information at any time — and we will do so promptly, no questions asked.
+                  information at any time, and we will do so promptly, no questions asked.
                 </p>
               </PolicySection>
 
@@ -242,17 +242,17 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   A Note From Us
                 </h3>
                 <p className="text-body-md text-on-surface-variant leading-relaxed mb-4">
-                  We built Restora because we believe people deserve better — a mind
+                  We built Restora because we believe people deserve better: a mind
                   that works for them, not against them. The last thing we want is to add
                   to your digital overwhelm with unwanted emails, spam, or data misuse.
                 </p>
                 <p className="text-body-md text-on-surface-variant leading-relaxed mb-4">
                   You came to us trusting that we care about your mental wellness. We do.
-                  And that starts here — with how we treat your information.
+                  And that starts here, with how we treat your information.
                 </p>
                 <blockquote className="border-l-4 border-primary pl-4 py-2 rounded-r">
                   <p className="text-body-md text-primary font-semibold italic">
-                    "Out of the fog. Into the flow." — that's our promise to your mind,
+                    "Out of the fog. Into the flow." That's our promise to your mind,
                     and to your privacy.
                   </p>
                 </blockquote>

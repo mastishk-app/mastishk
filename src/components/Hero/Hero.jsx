@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="flex flex-col items-start gap-6 text-left">
           <div className="flex flex-col gap-1">
             <span className="font-bold text-label-md text-secondary uppercase tracking-widest">
-              Out of the Fog, Into the Flow
+              Out of the Fog. Into the Flow.
             </span>
           </div>
 
@@ -21,20 +21,22 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-lg text-body-lg text-on-surface-variant">
-            Endless scrolling, AI overload, and short-form content are silently
-            draining your focus. Restora helps you reclaim your attention span.
+            Endless scroll and short-form feeds drain focus. Restora helps you
+            measure the damage and rebuild attention.
           </p>
 
           <div className="inline-block bg-gradient-to-r from-orange-400/80 to-amber-200/80 shadow-[0_0_20px_rgba(255,150,100,0.3)] mt-2 p-[3px] rounded-full transition-all duration-300 hover:scale-105 active:scale-95">
             <a
               href="#survey-anchor"
-              onClick={() => trackEvent("Clicked Take 60 Second Check", { location: "hero" })}
+              onClick={() =>
+                trackEvent("Clicked Start Focus Check", { location: "hero" })
+              }
               className="flex items-center gap-4 bg-primary py-2 pr-6 pl-2 rounded-full w-full h-full font-bold text-on-primary"
             >
               <div className="flex justify-center items-center bg-white/20 rounded-full w-10 h-10 shrink-0">
                 <Zap size={22} color="white" fill="white" />
               </div>
-              <span className="text-[17px]">Take the 60-Second Check</span>
+              <span className="text-[17px]">Start the Focus Check</span>
               <ArrowRight size={20} className="ml-2 text-white/80" />
             </a>
           </div>
@@ -43,7 +45,7 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end">
           <img
             src={mascot}
-            alt="Restora Mascot"
+            alt="Restora mascot looking overwhelmed by digital noise"
             className="w-full max-w-sm h-auto animate-gentle-bounce object-contain"
           />
         </div>

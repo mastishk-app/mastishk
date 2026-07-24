@@ -3,10 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import QuestionCard from "../QuestionCard/QuestionCard";
 import ResultTeaser from "../ResultTeaser/ResultTeaser";
 import supabase from "../../lib/supabase";
-import {
-  scoreAnswers,
-  DIMENSION_LABELS,
-} from "../../lib/scoreAnswersService";
+import { scoreAnswers, DIMENSION_LABELS } from "../../lib/scoreAnswersService";
 import { trackEvent, identifyUser } from "../../lib/analytics";
 import PhoneInput, {
   isValidPhoneNumber,
@@ -96,8 +93,10 @@ export default function SurveySection({ questions = [] }) {
       const storedToken = localStorage.getItem("restora_session_token");
       if (storedToken) {
         setSessionToken(storedToken);
-        const { data, error } = await supabase.rpc('get_my_survey', { token: storedToken });
-        
+        const { data, error } = await supabase.rpc("get_my_survey", {
+          token: storedToken,
+        });
+
         if (!error && data && data.length > 0) {
           const userResponse = data[0];
           setName(userResponse.name);
@@ -105,7 +104,7 @@ export default function SurveySection({ questions = [] }) {
           setContactValue(userResponse.contact_value);
           setAnswers(userResponse.answers || {});
           setReferralCode(userResponse.referral_code);
-          
+
           const ansKeys = Object.keys(userResponse.answers || {});
           const minReq = Math.min(3, questions.length);
           if (ansKeys.length >= minReq) {
@@ -113,9 +112,14 @@ export default function SurveySection({ questions = [] }) {
             const result = scoreAnswers(userResponse.answers || {});
             setScoreResult(result);
             setSubmitted(true);
+            setShowResultTeaser(false);
           } else {
-            const nextQIndex = questions.findIndex(q => !(userResponse.answers || {})[q.id]);
-            setCurrentStep(nextQIndex === -1 ? questions.length : nextQIndex + 1);
+            const nextQIndex = questions.findIndex(
+              (q) => !(userResponse.answers || {})[q.id],
+            );
+            setCurrentStep(
+              nextQIndex === -1 ? questions.length : nextQIndex + 1,
+            );
           }
         } else {
           localStorage.removeItem("restora_session_token");
@@ -130,7 +134,7 @@ export default function SurveySection({ questions = [] }) {
   const [contactValue, setContactValue] = useState("");
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [showResultTeaser, setShowResultTeaser] = useState(true);
+  const [showResultTeaser, setShowResultTeaser] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [scoreResult, setScoreResult] = useState(null);
@@ -170,18 +174,23 @@ export default function SurveySection({ questions = [] }) {
     setAnswers((prev) => {
       const newAnswers = { ...prev, [questionId]: answer };
       if (sessionToken) {
-        supabase.rpc('update_my_answers', { token: sessionToken, new_answers: newAnswers }).then(({error}) => {
-          if (error) console.error("Error updating answers:", error);
-        });
+        supabase
+          .rpc("update_my_answers", {
+            token: sessionToken,
+            new_answers: newAnswers,
+          })
+          .then(({ error }) => {
+            if (error) console.error("Error updating answers:", error);
+          });
       }
       return newAnswers;
     });
-    
-    const question = questions.find(q => q.id === questionId);
+
+    const question = questions.find((q) => q.id === questionId);
     trackEvent("Question Answered", {
       question_id: questionId,
       question_category: question?.category,
-      answer_value: answer
+      answer_value: answer,
     });
   };
 
@@ -204,11 +213,11 @@ export default function SurveySection({ questions = [] }) {
       if (!sessionToken) {
         setIsSubmitting(true);
         const generateUUID = () => {
-          return typeof crypto !== 'undefined' && crypto.randomUUID
+          return typeof crypto !== "undefined" && crypto.randomUUID
             ? crypto.randomUUID()
-            : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-                const r = Math.random() * 16 | 0;
-                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+            : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+                const r = (Math.random() * 16) | 0;
+                const v = c === "x" ? r : (r & 0x3) | 0x8;
                 return v.toString(16);
               });
         };
@@ -225,7 +234,7 @@ export default function SurveySection({ questions = [] }) {
             answers: answers,
             referral_code: newReferralCode,
             referred_by: referredBy || null,
-            session_token: newToken
+            session_token: newToken,
           },
         ]);
 
@@ -247,7 +256,7 @@ export default function SurveySection({ questions = [] }) {
         contact_method: contactMethod,
       });
       trackEvent("Survey Started", {
-        total_questions: questions.length
+        total_questions: questions.length,
       });
     }
 
@@ -274,27 +283,31 @@ export default function SurveySection({ questions = [] }) {
 
     try {
       if (sessionToken) {
-        const { error } = await supabase.rpc('update_my_answers', { token: sessionToken, new_answers: answers });
+        const { error } = await supabase.rpc("update_my_answers", {
+          token: sessionToken,
+          new_answers: answers,
+        });
         if (error) throw error;
       }
 
       const result = scoreAnswers(answers);
       setScoreResult(result);
       setSubmitted(true);
+      setShowResultTeaser(true);
 
       trackEvent("Survey Completed", {
         total_answered: Object.keys(answers).length,
         overall_score: result.overallScore,
         dominant_dimension: result.dominantDimension,
         severity: result.severity,
-        referred_by: referredBy || null
+        referred_by: referredBy || null,
       });
     } catch (err) {
       console.error("Supabase insert error:", err);
       setSubmitError(err.message || "Something went wrong. Please try again.");
-      
+
       trackEvent("Survey Error", {
-        error_message: err.message
+        error_message: err.message,
       });
     } finally {
       setIsSubmitting(false);
@@ -302,17 +315,51 @@ export default function SurveySection({ questions = [] }) {
   };
 
   if (submitted) {
-    if (!showResultTeaser) return null;
     return (
-      <ResultTeaser
-        name={name}
-        contactMethod={contactMethod}
-        contactValue={contactValue}
-        scoreResult={scoreResult}
-        referralCode={referralCode}
-        alreadyWaitlisted={alreadyWaitlisted}
-        onDismiss={() => setShowResultTeaser(false)}
-      />
+      <>
+        {showResultTeaser && (
+          <ResultTeaser
+            name={name}
+            contactMethod={contactMethod}
+            contactValue={contactValue}
+            scoreResult={scoreResult}
+            referralCode={referralCode}
+            alreadyWaitlisted={alreadyWaitlisted}
+            onDismiss={() => setShowResultTeaser(false)}
+          />
+        )}
+        <section
+          id="survey-anchor"
+          className="flex flex-col justify-center items-center mx-auto px-gutter py-2 w-full min-h-[calc(100vh-120px)]"
+        >
+          <div className="relative bg-surface shadow-md p-8 md:p-12 border-[#f4ece3] border-2 rounded-3xl w-full max-w-[700px] text-center glass-panel">
+            <div className="flex justify-center items-center bg-green-100 mx-auto mb-6 rounded-full w-16 h-16">
+              <MdCheckCircle size={36} className="text-green-600" />
+            </div>
+            <h2 className="mb-3 font-bold text-headline-md text-primary md:text-headline-lg">
+              You&apos;re already on the waitlist
+            </h2>
+            <p className="mx-auto mb-8 max-w-md text-body-md text-on-surface-variant leading-relaxed">
+              {name ? `${name}, w` : "W"}e&apos;ve got your spot saved.
+              We&apos;ll reach out when Restora is ready. No need to fill this
+              out again.
+            </p>
+            <div className="flex sm:flex-row flex-col justify-center gap-3">
+              <button
+                type="button"
+                onClick={() =>
+                  document
+                    .getElementById("whats-coming")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                }
+                className="inline-flex justify-center items-center gap-2 bg-primary hover:bg-primary/90 shadow-sm px-6 py-3 rounded-full font-bold text-label-md text-on-primary transition-colors"
+              >
+                See what&apos;s coming
+              </button>
+            </div>
+          </div>
+        </section>
+      </>
     );
   }
 
@@ -351,8 +398,11 @@ export default function SurveySection({ questions = [] }) {
         <div className="flex items-center gap-1 font-medium text-on-surface-variant text-sm">
           <MdAccessTime size={16} />
           <span>
-            About {Math.max(1, Math.ceil((totalSteps - currentStep) * 0.25))}{" "}
-            minutes to go
+            {currentStep === 0
+              ? "About 90 seconds total"
+              : currentStep >= totalSteps - 1
+                ? "Almost done"
+                : `About ${Math.max(15, Math.round(((totalSteps - 1 - currentStep) / Math.max(1, totalSteps - 1)) * 90))} seconds left`}
           </span>
         </div>
       </div>
@@ -386,7 +436,7 @@ export default function SurveySection({ questions = [] }) {
                 Tell us about yourself
               </h2>
               <p className="mb-md text-body-md text-on-surface-variant">
-                This helps us personalize your focus assessment.
+                So we can reach you when your results and Restora are ready.
               </p>
 
               <form
@@ -537,27 +587,27 @@ export default function SurveySection({ questions = [] }) {
                             className="w-full text-on-surface custom-phone-input"
                             limitMaxLength={true}
                           />
-                          <div className="flex items-center gap-1.5 mt-2 px-1 text-on-surface-variant text-sm">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="text-[#8c6b5d]"
-                            >
-                              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                            <span className="text-[#8c6b5d]">
-                              Your details are safe with us.
-                            </span>
-                          </div>
                         </>
                       )}
+                      <div className="flex items-center gap-1.5 mt-2 px-1 text-on-surface-variant text-sm">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-[#8c6b5d]"
+                        >
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span className="text-[#8c6b5d]">
+                          Your details are safe with us.
+                        </span>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -671,7 +721,7 @@ export default function SurveySection({ questions = [] }) {
                         if (ans && currentStep < totalSteps - 1) {
                           setTimeout(() => {
                             setCurrentStep((prev) =>
-                              prev < totalSteps - 1 ? prev + 1 : prev
+                              prev < totalSteps - 1 ? prev + 1 : prev,
                             );
                           }, 400);
                         }

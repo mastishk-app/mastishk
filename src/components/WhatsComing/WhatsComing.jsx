@@ -18,7 +18,7 @@ const FEATURES = [
     icon: Bug,
     title: 'Spot the Slip',
     description:
-      'Live chat sessions where the bot slips on purpose — catch the mistakes mid-conversation before they slide by.',
+      'Live chat sessions where the bot slips on purpose. Catch the mistakes mid-conversation before they slide by.',
     accent: 'bg-primary-fixed',
   },
   {
@@ -26,7 +26,7 @@ const FEATURES = [
     icon: Smartphone,
     title: 'Doomscroll Gate',
     description:
-      'Open a distraction app only after answering a few questions — difficulty rises each time you try.',
+      'Open a distraction app only after answering a few questions. Difficulty rises each time you try.',
     accent: 'bg-secondary-fixed',
   },
   {
@@ -34,7 +34,7 @@ const FEATURES = [
     icon: PenLine,
     title: 'Freewrite Sprint',
     description:
-      'Write with a 5-second pause limit — stop overthinking, or lose the draft and start fresh.',
+      'Write with a 5-second pause limit. Stop overthinking, or lose the draft and start fresh.',
     accent: 'bg-primary-fixed',
   },
   {
@@ -50,7 +50,7 @@ const FEATURES = [
     icon: MessagesSquare,
     title: 'Brainstormer',
     description:
-      "A thinking companion that won't hand you answers — it helps you think the solution through yourself.",
+      "A thinking companion that won't hand you answers. It helps you think the solution through yourself.",
     accent: 'bg-secondary-fixed',
   },
 ];
@@ -169,7 +169,7 @@ export default function WhatsComing() {
           What&apos;s coming
         </h2>
         <p className="text-body-lg text-on-surface-variant">
-          Ideas we&apos;re building. Tap the ones you want most — your vote
+          Ideas we&apos;re building. Tap the ones you want most. Your vote
           shapes the product.
         </p>
       </div>
@@ -187,7 +187,7 @@ export default function WhatsComing() {
       </div>
 
       <p className="relative mt-10 text-center text-body-md text-on-surface-variant">
-        And still cooking — a whole kitchen of focus tools is simmering behind the scenes.
+        And still cooking: a whole kitchen of focus tools is simmering behind the scenes.
       </p>
     </section>
   );

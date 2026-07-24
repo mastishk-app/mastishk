@@ -16,7 +16,7 @@ export default function Footer() {
           <span className="text-headline-lg text-primary font-bold">Restora</span>
         </div>
         <p className="text-body-sm text-on-surface-variant font-medium tracking-wide">
-          Out of the Fog, Into the Flow
+          Out of the Fog. Into the Flow.
         </p>
 
         <div className="flex flex-wrap justify-center gap-md">
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <p className="text-body-md text-on-surface-variant max-w-xs opacity-80">
-          © 2026 Cognitive Health Research. Crafted for human minds.
+          © 2026 Restora. Crafted for human minds.
         </p>
       </footer>
 
