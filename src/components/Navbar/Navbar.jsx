@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowRight, Sparkles, Home, Users } from "lucide-react";
-import logo from "../../assets/images/logo.png";
+import mastishkLogo from "../../assets/images/mastishk_logo.png";
 import { trackEvent } from "../../lib/analytics";
 
 const ANCHOR_LINKS = [
@@ -65,15 +65,14 @@ export default function Navbar() {
             className="flex items-center gap-xs"
             onClick={() => setSidebarOpen(false)}
           >
-            <div className="flex justify-center items-center">
-              <img
-                src={logo}
-                alt="Restora Logo"
-                className="w-auto h-8 object-contain"
-              />
-            </div>
+            <img
+              src={mastishkLogo}
+              alt=""
+              className="w-8 h-8 rounded-[4px] object-cover"
+              aria-hidden="true"
+            />
             <span className="font-bold text-headline-md text-primary">
-              Restora
+              MΛSTISHK
             </span>
           </Link>
 
@@ -158,9 +157,14 @@ export default function Navbar() {
         >
           <div className="flex justify-between items-center px-6 pt-8 pb-6 border-outline-variant/15 border-b">
             <div className="flex items-center gap-2">
-              <img src={logo} alt="" className="w-auto h-7 object-contain" />
+              <img
+                src={mastishkLogo}
+                alt=""
+                className="w-8 h-8 rounded-[4px] object-cover"
+                aria-hidden="true"
+              />
               <span className="font-bold text-body-md text-primary">
-                Restora
+                MΛSTISHK
               </span>
             </div>
             <button

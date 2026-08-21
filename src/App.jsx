@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 
 /**
- * Restora — Cognitive Fatigue Research Landing Page
+ * MΛSTISHK — Cognitive Fatigue Research Landing Page
  */
 export default function App() {
   return (

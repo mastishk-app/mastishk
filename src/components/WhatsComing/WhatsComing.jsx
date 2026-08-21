@@ -55,7 +55,7 @@ const FEATURES = [
   },
 ];
 
-const LOVED_KEY = "restora_feature_loves";
+const LOVED_KEY = "mastishk_feature_loves";
 
 function getLovedIds() {
   try {
@@ -138,7 +138,7 @@ export default function WhatsComing() {
           {
             feature_id: featureId,
             session_token:
-              localStorage.getItem("restora_session_token") || null,
+              localStorage.getItem("mastishk_session_token") || null,
           },
         ]);
 

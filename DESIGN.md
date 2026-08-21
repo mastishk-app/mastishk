@@ -1,5 +1,5 @@
 ---
-name: Restora
+name: MΛSTISHK
 colors:
   primary: "#9e3d00"
   secondary: "#76574e"
@@ -14,7 +14,7 @@ rounded:
 ---
 
 ## Overview
-Restora's design system is built on Tailwind CSS v3 and utilizes a warm, earthy color palette. It incorporates modern aesthetic principles such as glassmorphism and subtle micro-animations to create a premium, engaging user experience. The design heavily relies on semantic tokens inspired by Material Design 3.
+MΛSTISHK's design system is built on Tailwind CSS v3 and utilizes a warm, earthy color palette. It incorporates modern aesthetic principles such as glassmorphism and subtle micro-animations to create a premium, engaging user experience. The design heavily relies on semantic tokens inspired by Material Design 3.
 
 ## Colors
 - **Background**: Uses `#fbf9f1` (`background`, `surface`, `surface-bright`) as the foundation for a warm, welcoming feel.

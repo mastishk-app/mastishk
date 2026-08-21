@@ -44,11 +44,11 @@ export default function ResultTeaser({
     const shareUrl = referralCode
       ? `${window.location.origin}?ref=${referralCode}`
       : window.location.origin;
-    const shareText = `I just did Restora's 90-second focus check. Turns out my brain's been running on fumes. Try it: ${shareUrl}`;
+    const shareText = `I just did MΛSTISHK's 90-second focus check. Turns out my brain's been running on fumes. Try it: ${shareUrl}`;
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "Restora: 90-Second Focus Check",
+          title: "MΛSTISHK: 90-Second Focus Check",
           text: shareText,
           url: shareUrl,
         });
@@ -104,7 +104,7 @@ export default function ResultTeaser({
       const { error } = await supabase.from("user_feedback").insert([
         {
           feedback: trimmed,
-          session_token: localStorage.getItem("restora_session_token") || null,
+          session_token: localStorage.getItem("mastishk_session_token") || null,
           name: name || null,
           contact_value: contactValue || null,
         },
@@ -151,7 +151,7 @@ export default function ResultTeaser({
               : "You're on the list!"}
           </h2>
           <p className="max-w-sm font-medium text-[#4a3f35] text-lg leading-relaxed">
-            We&apos;ll hit you up the second Restora is ready. No spam energy.
+            We&apos;ll hit you up the second MΛSTISHK is ready. No spam energy.
             Promise.
           </p>
         </div>
@@ -276,7 +276,7 @@ export default function ResultTeaser({
                 </h3>
                 <p className="max-w-xs text-[#4a3f35] text-[15px] leading-relaxed">
                   Your note just landed with the team. Thanks for helping us
-                  make Restora less mid.
+                  make MΛSTISHK less mid.
                 </p>
                 <button
                   type="button"

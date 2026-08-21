@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-lg text-body-lg text-on-surface-variant">
-            Endless scroll and short-form feeds drain focus. Restora helps you
+            Endless scroll and short-form feeds drain focus. MΛSTISHK helps you
             measure the damage and rebuild attention.
           </p>
 
@@ -45,7 +45,7 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end">
           <img
             src={mascot}
-            alt="Restora mascot looking overwhelmed by digital noise"
+            alt="MΛSTISHK mascot looking overwhelmed by digital noise"
             className="w-full max-w-sm h-auto animate-gentle-bounce object-contain"
           />
         </div>

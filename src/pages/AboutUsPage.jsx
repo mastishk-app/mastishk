@@ -10,7 +10,7 @@ import {
 import mascot from '../assets/images/thinking_mascot.png';
 
 /**
- * AboutUs — Dedicated page explaining Restora's mission, vision, values,
+ * AboutUs — Dedicated page explaining MΛSTISHK's mission, vision, values,
  * and the team behind it. Follows the same warm, minimal design language.
  */
 export default function AboutUsPage() {
@@ -23,7 +23,7 @@ export default function AboutUsPage() {
      
 
       {/* ═══════════════════════════════════════════════════════════
-          SECTION 1 — What is Restora?
+          SECTION 1 — What is MΛSTISHK?
           ═══════════════════════════════════════════════════════════ */}
       <section className="px-gutter w-full mx-auto mb-xl">
         {/* Hero area */}
@@ -35,13 +35,13 @@ export default function AboutUsPage() {
         >
           <div className="flex flex-col gap-5">
             <span className="font-bold text-label-md text-secondary uppercase tracking-widest">
-              About Restora
+              About MΛSTISHK
             </span>
             <h1 className="text-headline-xl text-primary leading-tight">
               Reclaiming minds in the age of digital fog.
             </h1>
             <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-lg">
-              Restora isn&apos;t another guilt-trip wellness app. It&apos;s a playful,
+              MΛSTISHK isn&apos;t another guilt-trip wellness app. It&apos;s a playful,
               practical way to figure out why your focus is fried, and help you get
               it back.
             </p>
@@ -55,7 +55,7 @@ export default function AboutUsPage() {
           >
             <img
               src={mascot}
-              alt="Restora mascot thinking through digital fog"
+              alt="MΛSTISHK mascot thinking through digital fog"
               className="w-full max-w-xs h-auto object-contain"
             />
           </motion.div>
@@ -72,7 +72,7 @@ export default function AboutUsPage() {
         >
           <h2 className="text-headline-md text-primary font-bold mb-4 flex items-center gap-2">
             <Lightbulb size={22} className="text-primary" />
-            The Story Behind Restora
+            The Story Behind MΛSTISHK
           </h2>
           <div className="space-y-4 text-body-md text-on-surface-variant leading-relaxed">
             <p>
@@ -86,7 +86,7 @@ export default function AboutUsPage() {
               show up on a medical test, but hits hard by 3pm.
             </p>
             <p>
-              So before we built a bunch of features, we decided to listen. Restora
+              So before we built a bunch of features, we decided to listen. MΛSTISHK
               starts by talking to real people, learning how focus actually breaks,
               and building tools that feel human, not preachy.
             </p>
@@ -200,7 +200,7 @@ const teamMembers = [
   {
     name: 'Priyanshi Jain',
     role: 'Founder',
-    bio: 'Engineer obsessed with how tech shapes the mind. Designs the product experience so Restora feels calm, clear, and actually usable.',
+    bio: 'Engineer obsessed with how tech shapes the mind. Designs the product experience so MΛSTISHK feels calm, clear, and actually usable.',
     initials: 'PJ',
   },
   {

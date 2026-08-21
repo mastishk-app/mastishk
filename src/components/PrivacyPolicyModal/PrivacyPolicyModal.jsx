@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 /**
- * PrivacyPolicyModal — Renders the full Restora privacy policy
+ * PrivacyPolicyModal — Renders the full MΛSTISHK privacy policy
  * in an elegant, scrollable overlay modal.
  *
  * @param {{ isOpen: boolean, onClose: () => void }} props
@@ -80,7 +80,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
               {/* ── Title Section ── */}
               <div className="mb-8 pb-6 border-b border-outline-variant/20">
                 <p className="text-body-lg text-on-surface-variant font-medium italic">
-                  Restora: Out of the fog. Into the flow.
+                  MΛSTISHK: Out of the fog. Into the flow.
                 </p>
                 <div className="mt-3 flex flex-wrap gap-4 text-label-sm text-on-surface-variant/70">
                   <span>Effective Date: July 2026</span>
@@ -94,7 +94,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   We'll keep this simple and honest.
                 </h3>
                 <p className="text-body-md text-on-surface-variant leading-relaxed">
-                  At Restora, we believe in transparency. You're trusting us with your
+                  At MΛSTISHK, we believe in transparency. You're trusting us with your
                   information, and we take that seriously. This policy explains exactly
                   what we collect, why we collect it, and what we will never do with it.
                 </p>
@@ -112,7 +112,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   />
                   <PolicyBullet
                     bold="Your email address or mobile number"
-                    text="whichever contact method you choose, so we can reach you when Restora is ready"
+                    text="whichever contact method you choose, so we can reach you when MΛSTISHK is ready"
                   />
                   <PolicyBullet
                     bold="Your survey responses"
@@ -132,7 +132,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                 <blockquote className="border-l-4 border-primary pl-4 py-2 my-3 bg-primary-fixed/10 rounded-r">
                   <p className="text-body-md text-on-surface italic">
                     To understand the scale of cognitive fatigue and to keep you informed
-                    about Restora's progress and launch.
+                    about MΛSTISHK's progress and launch.
                   </p>
                 </blockquote>
                 <p className="text-body-md text-on-surface-variant">
@@ -148,7 +148,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   We will use your information <strong>only</strong> for:
                 </p>
                 <ul className="space-y-2">
-                  <PolicyBullet text="Sending you updates about Restora's development" />
+                  <PolicyBullet text="Sending you updates about MΛSTISHK's development" />
                   <PolicyBullet text="Notifying you when early access or the app is available" />
                   <PolicyBullet text="Sharing findings from our cognitive fatigue research (anonymised and aggregated, never individual)" />
                   <PolicyBullet text="Occasionally sharing relevant insights about cognitive health and mental wellness" />
@@ -178,7 +178,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
               {/* ── Section 5 ── */}
               <PolicySection number="5" title="Who Has Access to Your Data">
                 <p className="text-body-md text-on-surface-variant">
-                  Only the Restora core team has access to your information. We do not
+                  Only the MΛSTISHK core team has access to your information. We do not
                   share it with partners, investors, collaborators, or any external
                   parties, ever.
                 </p>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
               {/* ── Section 7 ── */}
               <PolicySection number="7" title="How Long We Keep It">
                 <p className="text-body-md text-on-surface-variant">
-                  We will keep your data for as long as Restora is active and you remain
+                  We will keep your data for as long as MΛSTISHK is active and you remain
                   subscribed to our communications. You can ask us to delete your
                   information at any time, and we will do so promptly, no questions asked.
                 </p>
@@ -242,7 +242,7 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
                   A Note From Us
                 </h3>
                 <p className="text-body-md text-on-surface-variant leading-relaxed mb-4">
-                  We built Restora because we believe people deserve better: a mind
+                  We built MΛSTISHK because we believe people deserve better: a mind
                   that works for them, not against them. The last thing we want is to add
                   to your digital overwhelm with unwanted emails, spam, or data misuse.
                 </p>
@@ -260,8 +260,8 @@ export default function PrivacyPolicyModal({ isOpen, onClose }) {
 
               {/* ── Footer ── */}
               <div className="mt-8 pt-6 border-t border-outline-variant/20 text-center">
-                <p className="text-body-lg font-bold text-primary">Restora</p>
-                <p className="text-body-md text-on-surface-variant">restora.app</p>
+                <p className="text-body-lg font-bold text-primary">MΛSTISHK</p>
+                <p className="text-body-md text-on-surface-variant">mastishk.app</p>
                 <p className="text-label-sm text-on-surface-variant/60 mt-1 italic">
                   Built for minds like yours.
                 </p>

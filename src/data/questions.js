@@ -1,5 +1,5 @@
 /**
- * Restora — cognitive self-assessment question bank.
+ * MΛSTISHK — cognitive self-assessment question bank.
  *
  * 12 questions across 5 clinically-grounded dimensions.
  * Each dimension maps to a distinct recovery protocol in the product.

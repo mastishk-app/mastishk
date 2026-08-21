@@ -6,7 +6,7 @@ import SurveySection from '../components/SurveySection/SurveySection';
 import questions from '../data/questions';
 
 /**
- * HomePage — The original Restora landing page content.
+ * HomePage — The original MΛSTISHK landing page content.
  */
 export default function HomePage() {
   return (

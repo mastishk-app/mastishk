@@ -1,5 +1,5 @@
 /**
- * Restora — answer scoring utility.
+ * MΛSTISHK — answer scoring utility.
  *
  * Takes the raw `answers` object from SurveySection state
  * and returns per-dimension scores normalised to 0–100,
@@ -112,7 +112,7 @@ export const SEVERITY_HEADLINES = {
   high: "Your mind is hitting a wall well before your day is over.",
 };
 
-// What Restora will do for the dominant dimension
+// What MΛSTISHK will do for the dominant dimension
 export const DOMINANT_RECOVERY_PROMISE = {
   attention_fragmentation:
     "Restoring your attention span will have the fastest impact on how present you feel.",

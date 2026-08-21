@@ -16,7 +16,7 @@ const journeySteps = [
     number: 2,
     title: 'Discovery',
     description:
-      'You find Restora, built for minds fried by screens, short-form feeds, and always-on digital life.',
+      'You find MΛSTISHK, built for minds fried by screens, short-form feeds, and always-on digital life.',
     icon: 'search',
   },
   {
@@ -30,14 +30,14 @@ const journeySteps = [
     number: 4,
     title: 'Join the waitlist',
     description:
-      "You're in for early access. We'll reach out when Restora is ready. No spam, just one message that matters.",
+      "You're in for early access. We'll reach out when MΛSTISHK is ready. No spam, just one message that matters.",
     icon: 'mail',
   },
   {
     number: 5,
     title: 'Your focus map',
     description:
-      'Restora maps your fatigue patterns and attention habits, then shapes a recovery plan that fits your mind.',
+      'MΛSTISHK maps your fatigue patterns and attention habits, then shapes a recovery plan that fits your mind.',
     icon: 'chip',
   },
   {
@@ -536,4 +536,3 @@ function TimelineStep({ step, index, isEven, isRevealed, stepRef }) {
     </motion.div>
   );
 }
-

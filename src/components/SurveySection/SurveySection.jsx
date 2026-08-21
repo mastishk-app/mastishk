@@ -112,7 +112,7 @@ export default function SurveySection({ questions = [] }) {
     trackEvent("Survey Intro Viewed");
 
     const initSession = async () => {
-      const storedToken = localStorage.getItem("restora_session_token");
+      const storedToken = localStorage.getItem("mastishk_session_token");
       if (storedToken) {
         setSessionToken(storedToken);
         const { data, error } = await supabase.rpc("get_my_survey", {
@@ -144,7 +144,7 @@ export default function SurveySection({ questions = [] }) {
             );
           }
         } else {
-          localStorage.removeItem("restora_session_token");
+          localStorage.removeItem("mastishk_session_token");
           setSessionToken("");
         }
       }
@@ -269,7 +269,7 @@ export default function SurveySection({ questions = [] }) {
 
         setSessionToken(newToken);
         setReferralCode(newReferralCode);
-        localStorage.setItem("restora_session_token", newToken);
+        localStorage.setItem("mastishk_session_token", newToken);
         setIsSubmitting(false);
       }
 
@@ -363,7 +363,7 @@ export default function SurveySection({ questions = [] }) {
             </h2>
             <p className="mx-auto mb-8 max-w-md text-body-md text-on-surface-variant leading-relaxed">
               {name ? `${name}, w` : "W"}e&apos;ve got your spot saved.
-              We&apos;ll reach out when Restora is ready. No need to fill this
+              We&apos;ll reach out when MΛSTISHK is ready. No need to fill this
               out again.
             </p>
             <div className="flex sm:flex-row flex-col justify-center gap-3">
@@ -458,7 +458,7 @@ export default function SurveySection({ questions = [] }) {
                 Tell us about yourself
               </h2>
               <p className="mb-md text-body-md text-on-surface-variant">
-                So we can reach you when your results and Restora are ready.
+                So we can reach you when your results and MΛSTISHK are ready.
               </p>
 
               <form

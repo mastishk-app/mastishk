@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS survey_responses (
 );
 
 -- Add a comment for documentation
-COMMENT ON TABLE survey_responses IS 'Stores questionnaire submissions from the Restora landing page.';
+COMMENT ON TABLE survey_responses IS 'Stores questionnaire submissions from the MΛSTISHK landing page.';
 
 -- Enable Row Level Security (required for Supabase anon key access)
 ALTER TABLE survey_responses ENABLE ROW LEVEL SECURITY;
@@ -81,4 +81,3 @@ CREATE POLICY "Allow anonymous feedback inserts"
   FOR INSERT
   TO anon
   WITH CHECK (true);
-
